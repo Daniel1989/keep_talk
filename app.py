@@ -15,6 +15,7 @@ from fastrtc import (
     Stream,
     get_twilio_turn_credentials,
     wait_for_item,
+    get_hf_turn_credentials
 )
 from google import genai
 from google.genai.types import (
@@ -29,6 +30,10 @@ from pydantic import BaseModel
 current_dir = pathlib.Path(__file__).parent
 
 load_dotenv()
+
+# Pass a valid access token for your Hugging Face account
+# or set the HF_TOKEN environment variable 
+# credentials = get_hf_turn_credentials(token=None)
 
 
 def encode_audio(data: np.ndarray) -> str:
