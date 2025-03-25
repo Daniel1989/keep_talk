@@ -172,10 +172,10 @@ if __name__ == "__main__":
     import os
 
     if (mode := os.getenv("MODE")) == "UI":
-        stream.ui.launch(server_port=7860)
+        stream.ui.launch(server_port=3000)
     elif mode == "PHONE":
-        stream.fastphone(host="0.0.0.0", port=7860)
+        stream.fastphone(host="0.0.0.0", port=3000)
     else:
         import uvicorn
 
-        uvicorn.run(app, host="0.0.0.0", port=7860)
+        uvicorn.run(app, host="0.0.0.0", port=3000)
