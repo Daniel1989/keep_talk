@@ -156,7 +156,7 @@ stream.mount(app)
 
 @app.post("/input_hook")
 async def _(body: InputData):
-    stream.set_input(body.webrtc_id, body.api_key, body.voice_name)
+    stream.set_input(body.webrtc_id, os.getenv("GEMINI_API_KEY"), body.voice_name)
     return {"status": "ok"}
 
 
