@@ -126,7 +126,7 @@ stream = Stream(
         gr.Textbox(
             label="API Key",
             type="password",
-            value=os.getenv("GEMINI_API_KEY") if not get_space() else "",
+            value=os.getenv("GEMINI_API_KEY"),
         ),
         gr.Dropdown(
             label="Voice",
